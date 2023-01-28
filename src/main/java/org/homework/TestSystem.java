@@ -15,17 +15,20 @@ public class TestSystem {
         for (int i = 0; i < questions.length; i++) {
             String question = questions[i];
             System.out.println(question);
-            int answer = sc.nextInt();
-            if (answer == correctAnswers[i]) {
-                System.out.println("Верно.\n");
-                result += 1;
-            } else {
-                System.out.println("Неверно.\n");
-        }
+            try {
+                int answer = sc.nextInt();
+                if (answer == correctAnswers[i]) {
+                    System.out.println("Верно.\n");
+                    result += 1;
+                } else {
+                    System.out.println("Неверно.\n");
+                }
+            } catch (Exception e) {
+                System.out.println("Пожалуйста, введите ответ цифрой.\n");
+                sc.next();
+                i -= 1;
+            }
         }
         System.out.println("Всего правильных ответов: " + result + " из " + questions.length + ".");
-
     }
-
-
-    }
+}
