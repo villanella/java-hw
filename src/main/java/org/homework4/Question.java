@@ -11,13 +11,9 @@ public class Question {
     }
 
     public void print_question() {
-//        System.out.println(text);
           System.out.printf(
                   "Вопрос %s. %s\n",
                   number, text);
     }
 
-//    public void check_answer(int answerIndex) {
-//        return answerIndex.CorrectAnswer;
-//    }
 }
