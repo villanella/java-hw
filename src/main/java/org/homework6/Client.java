@@ -10,15 +10,9 @@ class Client {
     private LocalDate dateOfBirth;
     private Set<Integer> accountIds;
 
-    public Client(String id, String name, LocalDate dateOfBirth) {
-        this.id = id;
+    public Client(String name, LocalDate dateOfBirth) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
-        this.accountIds = new HashSet<>();
-    }
-
-    public String getId() {
-        return id;
     }
 
     public String getName() {
@@ -29,21 +23,5 @@ class Client {
         LocalDate now = LocalDate.now();
         Period period = Period.between(dateOfBirth, now);
         return period.getYears();
-    }
-
-    public void addAccountId(int accountId) {
-        accountIds.add(accountId);
-    }
-
-    public boolean containsAccountId(int accountId) {
-        return accountIds.contains(accountId);
-    }
-
-    public void removeAccountId(int accountId) {
-        accountIds.remove(accountId);
-    }
-
-    public Set<Integer> getAccountIds() {
-        return accountIds;
     }
 }

@@ -20,7 +20,6 @@ public class Bank {
         if (clientAccounts.containsKey(client)) {
             List<Account> accounts = clientAccounts.get(client);
             accounts.add(account);
-            client.addAccountId(account.getId());
         }
     }
 
@@ -31,8 +30,10 @@ public class Bank {
     public Client findClient(Account account) {
         for (Map.Entry<Client, List<Account>> entry : clientAccounts.entrySet()) {
             List<Account> accounts = entry.getValue();
-            if (accounts.contains(account)) {
-                return entry.getKey();
+            for (Account acc : accounts) {
+                if (acc.getId() == account.getId()) {
+                    return entry.getKey();
+                }
             }
         }
         return null;
