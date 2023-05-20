@@ -3,18 +3,18 @@ package org.homework6;
 
 public class Account {
     private int id;
-    private int amount;
+    private int balance;
 
-    public Account(int id, int amount) {
+    public Account(int id, int balance) {
         this.id = id;
-        this.amount = amount;
+        this.balance = balance;
     }
 
     public int getId() {
         return id;
     }
 
-    public int getAmount() {
-        return amount;
+    public int getBalance() {
+        return balance;
     }
 }

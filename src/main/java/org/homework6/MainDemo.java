@@ -2,7 +2,6 @@ package org.homework6;
 import java.time.LocalDate;
 import java.util.List;
 import java.lang.String;
-import java.time.LocalDate;
 
 public class MainDemo {
     public static void main(String[] args) {
@@ -31,7 +30,7 @@ public class MainDemo {
         List<Account> petrovAccounts = bank.getAccounts(petrov);
         System.out.println("Petrov accounts:");
         for (Account account : petrovAccounts) {
-            System.out.println("Account ID: " + account.getId() + ", Amount: " + account.getAmount() + " coins.");
+            System.out.println("Account ID: " + account.getId() + ", Balance: " + account.getBalance() + " coins.");
         }
 
         // Find client by account
