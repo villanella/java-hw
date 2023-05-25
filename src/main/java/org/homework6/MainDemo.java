@@ -31,9 +31,10 @@ public class MainDemo {
         bank.addAccount(petrov, account3);
 
         // Retrieve accounts for a client
-        List<Account> petrovAccounts = bank.getAccounts(petrov);
-        System.out.println("Petrov accounts:");
-        for (Account account : petrovAccounts) {
+        Client client = petrov;
+        List<Account> clientAccounts = bank.getAccounts(client);
+        System.out.println(client.getName() + " accounts:");
+        for (Account account : clientAccounts) {
             System.out.println("Account ID: " + account.getId() + ", Balance: " + account.getBalance() + " coins.");
         }
 
