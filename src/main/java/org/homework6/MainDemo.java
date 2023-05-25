@@ -38,11 +38,12 @@ public class MainDemo {
         }
 
         // Find client by account
-        Client foundClient = bank.findClient(account1);
+        Account account = account1;
+        Client foundClient = bank.findClient(account);
         if (foundClient != null) {
-            System.out.println("Client found for account 1: " + foundClient.getName());
+            System.out.println("Client found for the account ID " + account.getId() + ": " + foundClient.getName());
         } else {
-            System.out.println("Client not found for account 1.");
+            System.out.println("Client not found for this account.");
         }
 
         boolean allowOperation = bank.isBankOperationAllowed(petrov);
