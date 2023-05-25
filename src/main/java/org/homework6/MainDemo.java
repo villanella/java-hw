@@ -5,6 +5,10 @@ import java.lang.String;
 
 public class MainDemo {
     public static void main(String[] args) {
+
+        // Start measuring the execution time
+        long startTime = System.currentTimeMillis();
+
         // Create bank instance
         Bank bank = new Bank();
 
@@ -23,7 +27,7 @@ public class MainDemo {
 
         // Add accounts to clients
         bank.addAccount(ivanov, account1);
-        bank.addAccount(petrov, account2);
+        bank.addAccount(petrov, account3);
         bank.addAccount(petrov, account3);
 
         // Retrieve accounts for a client
@@ -43,5 +47,14 @@ public class MainDemo {
 
         boolean allowOperation = bank.isBankOperationAllowed(petrov);
         System.out.println("Operations allowed: " + allowOperation);
+
+        // End measuring the execution time
+        long endTime = System.currentTimeMillis();
+
+        // Calculate the execution time in milliseconds
+        long executionTime = endTime - startTime;
+
+        // Print the execution time
+        System.out.println("Execution time: " + executionTime + " ms");
     }
 }
