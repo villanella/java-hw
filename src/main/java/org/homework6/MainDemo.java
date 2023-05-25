@@ -27,7 +27,7 @@ public class MainDemo {
 
         // Add accounts to clients
         bank.addAccount(ivanov, account1);
-        bank.addAccount(petrov, account3);
+        bank.addAccount(petrov, account2);
         bank.addAccount(petrov, account3);
 
         // Retrieve accounts for a client
