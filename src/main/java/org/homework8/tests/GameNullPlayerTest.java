@@ -3,7 +3,7 @@ package org.homework8.tests;
 import org.homework8.game.*;
 
 
-public class NullPlayerTest {
+public class GameNullPlayerTest {
     public static void main(String[] args) {
         Dice dice = new DiceImpl();
         GameWinnerPrinter winnerPrinter = new GameWinnerConsolePrinter();

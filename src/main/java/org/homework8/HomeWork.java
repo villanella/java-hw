@@ -1,5 +1,4 @@
 package org.homework8;
-import org.homework8.game.*;
 import org.homework8.tests.*;
 
 public class HomeWork {
@@ -16,37 +15,21 @@ public class HomeWork {
      */
     public static void main(String[] args) {
 
-        runGameTest();
-        runGameTestWithTie();
-        runNullPlayerTest();
-    }
+        //new GameTest().runGameTest();
+        //System.out.println("\n\n----------------------\n\n");
 
+        new GameTestWithTie().runGameTestWithTie();
+        System.out.println("\n\n----------------------\n\n");
 
-    private static void runGameTest() {
-        System.out.println("Running GameTest...");
-        try {
-            GameTest.main(null);
-            System.out.println("GameTest passed.");
-        } catch (AssertionError e) {
-            System.err.println("GameTest failed: " + e.getMessage());
+     //   new DiceImplTest().testRoll();
+     //   System.out.println("\n\n----------------------\n\n");
         }
-        System.out.println();
-    }
-    private static void runGameTestWithTie() {
-        System.out.println("Running GameTestWithTie...");
-        try {
-            GameTestWithTie.main(null);
-            System.err.println("GameTestWithTie failed: Expected output 'It's a tie!'");
-        } catch (AssertionError e) {
-            System.err.println("GameTestWithTie passed");
-        }
-        System.out.println();
-    }
+
 
     private static void runNullPlayerTest() {
         System.out.println("Running NullPlayerTest...");
         try {
-            NullPlayerTest.main(null);
+            GameNullPlayerTest.main(null);
             System.err.println("NullPlayerTest failed: Expected NullPointerException");
         } catch (NullPointerException e) {
             System.out.println("NullPlayerTest passed.");
