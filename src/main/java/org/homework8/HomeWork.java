@@ -15,29 +15,25 @@ public class HomeWork {
      */
     public static void main(String[] args) {
 
-        //new GameTest().runGameTest();
-        //System.out.println("\n\n----------------------\n\n");
+//         Need to correct: it's required set fixed values from DiceMock.
+//        new GameTest().runGameTest();
+//        System.out.println("\n\n----------------------\n\n");
+
+        new DiceImplRepeatsTest().testDiceImplRepeats();
+        System.out.println("\n\n----------------------\n\n");
 
         new GameTestWithTie().runGameTestWithTie();
         System.out.println("\n\n----------------------\n\n");
 
-     //   new DiceImplTest().testRoll();
-     //   System.out.println("\n\n----------------------\n\n");
+        new GameNullPlayerTest().runGameNullPlayerTest();
+        System.out.println("\n\n----------------------\n\n");
+
+        new DiceImplTest().testRollInRange();
+        System.out.println("\n\n----------------------\n\n");
         }
 
 
-    private static void runNullPlayerTest() {
-        System.out.println("Running NullPlayerTest...");
-        try {
-            GameNullPlayerTest.main(null);
-            System.err.println("NullPlayerTest failed: Expected NullPointerException");
-        } catch (NullPointerException e) {
-            System.out.println("NullPlayerTest passed.");
-        } catch (Exception e) {
-            System.err.println("NullPlayerTest failed: " + e.getMessage());
-        }
-        System.out.println();
-    }
+
 
 }
 

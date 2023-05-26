@@ -2,6 +2,7 @@ package org.homework8.tests;
 
 import org.homework8.assertions.Assertions;
 import org.homework8.game.*;
+import org.homework8.tests.fakes.*;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
@@ -36,25 +37,13 @@ public class GameTestWithTie {
 
            // Assert the expected output
            Assertions.assertEquals("Ничья!", output);
-           System.out.println("GameTest passed.");
+           System.out.println("GameTestWithTie passed.");
 
        } catch (AssertionError e) {
-           System.err.println("GameTest failed: " + e.getMessage());
+           System.err.println("GameTestWithTie failed: " + e.getMessage());
        } catch (Exception e) {
-           System.err.println("GameTest failed with an unexpected exception: " + e.getMessage());
+           System.err.println("GameTestWithTie failed with an unexpected exception: " + e.getMessage());
        }
    }
 
-    private static class DiceMock implements Dice {
-        private final int fixedValue;
-
-        public DiceMock(int fixedValue) {
-            this.fixedValue = fixedValue;
-        }
-
-        @Override
-        public int roll() {
-            return fixedValue;
-        }
-    }
 }

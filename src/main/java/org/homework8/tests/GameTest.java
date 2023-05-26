@@ -39,8 +39,5 @@ public class GameTest {
         }
 
 
-
-        // Expected output: "Победитель: Игорь"
-        // If the output is different, the test fails
     }
 }

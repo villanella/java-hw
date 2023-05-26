@@ -39,4 +39,10 @@ public class Assertions {
         }
     }
 
+    public static void assertTrue(boolean condition, String s) {
+        if (!condition) {
+            throw new AssertionError("Assertion failed: expected true but was false");
+        }
+    }
+
 }
