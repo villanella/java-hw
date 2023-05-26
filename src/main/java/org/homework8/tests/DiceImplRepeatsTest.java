@@ -1,14 +1,10 @@
 package org.homework8.tests;
 
-import org.homework8.assertions.Assertions;
-import java.util.Random;
-import org.homework8.assertions.Assertions;
 import org.homework8.game.*;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import static org.homework8.assertions.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DiceImplRepeatsTest {
     @DisplayName("Тест на случайность значений")

@@ -1,5 +1,4 @@
 package org.homework8.tests;
-import java.util.Random;
 import org.homework8.assertions.Assertions;
 import org.homework8.game.*;
 import org.junit.Test;

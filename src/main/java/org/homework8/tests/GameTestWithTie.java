@@ -10,7 +10,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 public class GameTestWithTie {
-   @DisplayName("Teст ничьи")
+   @DisplayName("Teст на ничью")
    @Test
    public void runGameTestWithTie() {
        try {
